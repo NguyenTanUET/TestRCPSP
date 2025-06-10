@@ -23,6 +23,8 @@ Please refer to documentation for appropriate setup of solving configuration.
 
 from docplex.cp.model import *
 import os
+from google.cloud import storage
+import os
 
 # -----------------------------------------------------------------------------
 # Initialize the problem data
@@ -105,11 +107,8 @@ res = mdl.solve(FailLimit=1000000, TimeLimit=10)
 print('Solution: ')
 res.print_solution()
 
-from google.cloud import storage
-import os
-
 # Tên bucket mà bạn đã tạo
-bucket_name = "rcpsp-results-bucket"
+bucket_name = "rcpsp-bounds-search-results-bucket"
 client = storage.Client()
 bucket = client.bucket(bucket_name)
 
