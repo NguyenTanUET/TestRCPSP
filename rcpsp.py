@@ -108,7 +108,7 @@ print('Solution: ')
 res.print_solution()
 
 # Tên bucket mà bạn đã tạo
-bucket_name = "rcpsp-bounds-search-results-bucket"
+bucket_name = "rcpsp-with-bounds-results-bucket"
 client = storage.Client()
 bucket = client.bucket(bucket_name)
 
